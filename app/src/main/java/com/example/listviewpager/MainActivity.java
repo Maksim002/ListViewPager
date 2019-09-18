@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.animation.ArgbEvaluator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.widget.ImageView;
 
 import com.example.listviewpager.NewaDRISA.Brochore;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements Listener {
     private Integer[] colors = null;
     private ArgbEvaluator argbEvaluator = new ArgbEvaluator();
     private List<Model> list;
+    private Parcelable bundleParcelable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +30,9 @@ public class MainActivity extends AppCompatActivity implements Listener {
         setContentView(R.layout.activity_main);
 
         list = new ArrayList<>();
-        list.add(new Model(R.drawable.ic_launcher_background,"Brochore"," pdf file downloaded by my app is created successfully and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
-        list.add(new Model(R.drawable.ic_launcher_background,"Stec"," pdf file downloaded by my app is created successfully and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
-        list.add(new Model(R.drawable.ic_launcher_background,"Broch"," pdf file downloaded by my app is created successfully and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
+        list.add(new Model(R.drawable.topic,"Brochore"," pdf file downloaded by my app is created successfully and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
+        list.add(new Model(R.drawable.mobic,"Stec","  my app"));
+        list.add(new Model(R.drawable.ic_launcher_background,"Broch"," and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
         list.add(new Model(R.drawable.ic_launcher_background,"hmara"," pdf file downloaded by my app is created successfully and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
         list.add(new Model(R.drawable.ic_launcher_background,"clara"," pdf file downloaded by my app is created successfully and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
 
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements Listener {
     @Override
     public void onItemSelectodClicc(Model model) {
         Intent intent = new Intent(MainActivity.this, Stec.class);
-        intent.putExtra("STRING_I", model.getImage());
+        intent.putExtra("Property", model);
         startActivity(intent);
     }
 }

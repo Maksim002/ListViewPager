@@ -29,15 +29,16 @@
                 android:layout_below="@+id/icon"
                 android:padding="8dp"
                 android:textSize="16dp"
-                android:text="See documentation for"/>
+                android:text=""/>
 
             <TextView
+                android:id="@+id/spisoc"
                 android:textSize="15dp"
                 android:gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/text1"
-                android:text="@string/whether_the_content_provider_is_available_for_other_applications_to_use_true_the_provider_is_available_to_other_applications_any_application_can_use_the_provider_s_content_uri_to_access_it_subject_to_the_permissions_specified_for_the_provider_false_the_provider_is_not_available_to_other_applications_access_to_the_provider_to_your_applications_only_applications_that_have_the_same_user_id_uid_as_the_provider_will_have_access_to_it"/>
+                android:text=""/>
 
         </RelativeLayout>
 
