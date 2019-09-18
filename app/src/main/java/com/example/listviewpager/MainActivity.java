@@ -6,6 +6,10 @@ import androidx.viewpager.widget.ViewPager;
 import android.animation.ArgbEvaluator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
+
+import com.example.listviewpager.NewaDRISA.Brochore;
+import com.example.listviewpager.NewaDRISA.Stec;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements Listener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageView imageView = findViewById(R.id.icon);
 
         list = new ArrayList<>();
         list.add(new Model(R.drawable.ic_launcher_background,"Brochore"," pdf file downloaded by my app is created successfully and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
@@ -70,6 +76,8 @@ public class MainActivity extends AppCompatActivity implements Listener {
 
     @Override
     public void onItemSelectodClicc(Model model) {
-
+        Intent intent = new Intent(MainActivity.this, Stec.class);
+        intent.putExtra("STRING_I", model.getImage());
+        startActivity(intent);
     }
 }

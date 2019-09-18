@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".NewActiviti" />
+        <activity android:name=".NewaDRISA.Brochore" />
+        <activity android:name=".NewaDRISA.Stec" />
     </application>
 
 </manifest>
