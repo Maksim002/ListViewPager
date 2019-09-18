@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity implements Listener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView imageView = findViewById(R.id.icon);
-
         list = new ArrayList<>();
         list.add(new Model(R.drawable.ic_launcher_background,"Brochore"," pdf file downloaded by my app is created successfully and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
         list.add(new Model(R.drawable.ic_launcher_background,"Stec"," pdf file downloaded by my app is created successfully and I am able to open it successfully from any File Manager (ES File Explorer now) but not from my app"));
